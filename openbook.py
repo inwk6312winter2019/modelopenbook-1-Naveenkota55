@@ -7,12 +7,14 @@ def list_ifname_ip():
                 line.strip().split('/n')
                 if term in line:
                         line_nameif=line.replace('nameif','')
+                        line_nameif=line_nameif.strip()
                         print (line_nameif)
                 if term2 in line:
                         line_ip_address=line.replace('ip address','')
+                        line_ip_address=line_ip_address.strip()
+                        line_ip_address=line_ip_address.replace(' ',',')
                         print (line_ip_address)
-                
-                #dict.update({line_nameif:line_ip_address})
+                        dict.update({line_nameif:line_ip_address})
                 
 
 list_ifname_ip()
