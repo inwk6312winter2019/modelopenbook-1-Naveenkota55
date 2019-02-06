@@ -23,11 +23,3 @@ file.close()
 
 
 
-
-
-'''
-
-	for lines in fin:
-		lines1=lines.split()
-		print (lines)
-'''
